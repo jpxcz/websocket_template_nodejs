@@ -1,0 +1,22 @@
+{
+  "name": "websocket_api",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@asyncapi/parser": "^2.1.0",
+    "@fastify/websocket": "^8.2.0",
+    "fastify": "^4.22.0",
+    "typescript": "^5.2.2",
+    "zod": "^3.22.2",
+    "zod-to-json-schema": "^3.21.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.7",
+    "@types/ws": "^8.5.5",
+    "ts-node": "^10.9.1"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "type": "object",
+  "properties": {
+    "msgType": {
+      "type": "string",
+      "default": "auth",
+      "description": "message type"
+    },
+    "token": {
+      "type": "string",
+      "description": "authentication token"
+    }
+  }
+}
