@@ -6,7 +6,6 @@ const rootProjectPath = path.resolve(__dirname, '..');
 
 export async function generateDocumentationSchemas() {
   const documentationSchemaPath = rootProjectPath + '/documentation/schemas';
-  console.log(authenticationJsonSchema);
   try {
     await fs.writeFile(
       documentationSchemaPath + '/authentication.json',
@@ -15,4 +14,8 @@ export async function generateDocumentationSchemas() {
   } catch (err) {
     console.error(err);
   }
+
+  setTimeout(() => process.exit(0), 2000);
 }
+
+generateDocumentationSchemas();

@@ -17,6 +17,7 @@
     "ts-node": "^10.9.1"
   },
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "docs": "rm -f documentation/schemas/* && ts-node src/documentation.ts && cd documentation && asyncapi generate fromTemplate asyncapi.yaml @asyncapi/html-template -o output && cd .."
   }
 }

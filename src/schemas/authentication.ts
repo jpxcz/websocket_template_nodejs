@@ -12,5 +12,5 @@ export const authenticationSchema = z
 
 export const authenticationJsonSchema = zodToJsonSchema(
   authenticationSchema,
-  'authenticationSchema'
+  'schema'
 );

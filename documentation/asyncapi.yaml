@@ -5,15 +5,14 @@ info:
 
 servers:
   localhost:
-    url: http://localhost:3000
+    url: http://localhost:3000/ws
     protocol: ws
 
 channels:
-  /ws:
+  authentication:
     publish:
       operationId: onAuthentication 
       message:
         name: 'authentication'
-        schemaFormat: application/vnd.aai.asyncapi+yaml;version=2.2.0
         payload:
-          $ref: './schemas/authentication.json'
+          $ref: './schemas/authentication.json#/definitions/schema'
