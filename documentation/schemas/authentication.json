@@ -1,20 +1,14 @@
 {
-  "$ref": "#/definitions/authenticationSchema",
-  "definitions": {
-    "authenticationSchema": {
-      "type": "object",
-      "properties": {
-        "msgType": {
-          "type": "string",
-          "description": "message type",
-          "default": "auth"
-        },
-        "token": { "type": "string", "description": "authentication token" }
-      },
-      "required": ["token"],
-      "additionalProperties": false,
-      "description": "authenticate the websocket with the provided token"
-    }
+  "type": "object",
+  "properties": {
+    "msgType": {
+      "type": "string",
+      "description": "message type",
+      "default": "auth"
+    },
+    "token": { "type": "string", "description": "authentication token" }
   },
-  "$schema": "http://json-schema.org/draft-07/schema#"
+  "required": ["token"],
+  "additionalProperties": false,
+  "description": "authenticate the websocket with the provided token"
 }
