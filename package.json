@@ -18,6 +18,6 @@
   },
   "scripts": {
     "start": "ts-node src/index.ts",
-    "docs": "rm -f documentation/schemas/* && ts-node src/documentation.ts && cd documentation && asyncapi generate fromTemplate asyncapi.yaml @asyncapi/html-template -o output && cd .."
+    "docs": "rm -f documentation/schemas/* && ts-node src/lib/documentation.ts && cd documentation && asyncapi generate fromTemplate asyncapi.yaml @asyncapi/html-template -o output && cd .."
   }
 }

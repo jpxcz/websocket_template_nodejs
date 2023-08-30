@@ -1,10 +1,10 @@
 import path from 'node:path';
 import fs from 'node:fs/promises';
-import { authenticationJsonSchema } from './schemas/authentication';
+import { authenticationJsonSchema } from '../schemas/authentication';
 
-const rootProjectPath = path.resolve(__dirname, '..');
+const rootProjectPath = path.resolve(__dirname, '../..');
 
-export async function generateDocumentationSchemas() {
+async function generateDocumentationSchemas() {
   const documentationSchemaPath = rootProjectPath + '/documentation/schemas';
   try {
     await fs.writeFile(

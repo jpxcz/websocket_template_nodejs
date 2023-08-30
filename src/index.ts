@@ -1,6 +1,5 @@
 import Fastify from 'fastify';
 import FastifyWsPlugin from '@fastify/websocket';
-import { generateDocumentationSchemas } from './documentation';
 import { authenticationSchema } from './schemas/authentication';
 
 const fastify = Fastify({
@@ -14,7 +13,7 @@ fastify.register(async function (fastify) {
     connection.socket.on('message', (message) => {
       const msg = JSON.parse(message.toString());
       if (!msg.msgType) {
-        console.warn('no msgType property. Wont be able to sanitize the message');
+        fastify.log.warn({ msg: 'no msgType property found' });
         return;
       }
 
@@ -28,7 +27,7 @@ fastify.register(async function (fastify) {
             break;
         }
       } catch (err) {
-        console.error(err);
+        fastify.log.error({ msg: 'error on message', error: err });
       }
     });
   });
