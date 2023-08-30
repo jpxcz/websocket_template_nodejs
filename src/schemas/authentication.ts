@@ -3,7 +3,7 @@ import { zodToJsonSchema } from 'zod-to-json-schema';
 
 export const authenticationSchema = z
   .object({
-    msgType: z.string({ description: 'message type' }).default('auth'),
+    msgType: z.literal('auth'),
     username: z.string(),
     password: z.string(),
   })

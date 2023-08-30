@@ -1,6 +1,6 @@
 asyncapi: 2.6.0
 info:
-  title: 'Websocket Trading Service'
+  title: 'Websocket Service'
   version: 1.0.0
 
 servers:

@@ -1,4 +1,4 @@
-# Websocket Server Template
+# Websocket Server Template with documentation
 Basic template that allows a single websocket route with a multiple handler of websocket messages
 
 ## Startup
@@ -6,6 +6,7 @@ Basic template that allows a single websocket route with a multiple handler of w
 $ yarn install
 $ yarn docs
 $ yarn start
+# localhost:3000/documentation
 ```
 
 ## Documentation generator
