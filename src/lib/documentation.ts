@@ -1,6 +1,7 @@
 import path from 'node:path';
 import fs from 'node:fs/promises';
 import { authenticationJsonSchema } from '../schemas/authentication';
+import { authenticationAckJsonSchema } from '../schemas/authentication_ack';
 
 const rootProjectPath = path.resolve(__dirname, '../..');
 const documentationSchemaPath = rootProjectPath + '/documentation/schemas';
@@ -11,6 +12,10 @@ function schemaGenerator(): Promise<void>[] {
     fs.writeFile(
       documentationSchemaPath + '/authentication.json',
       JSON.stringify(authenticationJsonSchema)
+    ),
+    fs.writeFile(
+      documentationSchemaPath + '/authentication_ack.json',
+      JSON.stringify(authenticationAckJsonSchema)
     ),
   ];
   return promises;

@@ -1,0 +1,1 @@
+{"$ref":"#/definitions/schema","definitions":{"schema":{"type":"object","properties":{"msgType":{"type":"string","const":"auth_ack"},"status":{"type":"boolean","default":false}},"required":["msgType"],"additionalProperties":false,"description":"response on the authentication"}},"$schema":"http://json-schema.org/draft-07/schema#"}
