@@ -10,13 +10,16 @@ servers:
 
 channels:
   authentication:
+    description: 'Send message to authenticate the websocket. You should expect the `authentication_ack` message to know if the user authenticated succesfully'
     publish:
       message:
         name: 'authentication'
         payload:
           $ref: './schemas/authentication.json#/definitions/schema'
   authentication_ack:
+    description: 'Expected result from the `authentication` message'
     subscribe:
       message:
+        name: 'authentication_ack'
         payload:
           $ref: './schemas/authentication_ack.json#/definitions/schema'
